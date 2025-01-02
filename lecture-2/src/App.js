@@ -30,6 +30,12 @@ function App() {
   //컴포넌트 preloading 타이밍 2번
   useEffect(() => {
     LazyImageModal.preload();
+
+    //이미지 preloading
+    //전체 이미지를 preloading할 필요는 없고 대표 이미지만 preloading해도 괜찮음
+    const img = new Image();
+    img.src =
+      "https://stillmed.olympic.org/media/Photos/2016/08/20/part-1/20-08-2016-Football-Men-01.jpg?interpolation=lanczos-none&resize=*:800";
   }, []);
 
   return (

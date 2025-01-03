@@ -25,3 +25,9 @@
 1. 컴포넌트 Lazy Loading(코트 스플리팅)
 2. 컴포넌트 Preloading
 3. 이미지 Preloading
+
+#### lecture-3
+
+- 로딩 성능 최적화
+
+1. 이미지 Lazy Loading

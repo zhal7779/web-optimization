@@ -30,4 +30,4 @@
 
 - 로딩 성능 최적화
 
-1. 이미지 Lazy Loading
+1. 이미지 Lazy Loading(+ intersection observer)

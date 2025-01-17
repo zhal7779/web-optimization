@@ -31,3 +31,4 @@
 - 로딩 성능 최적화
 
 1. 이미지 Lazy Loading(+ intersection observer)
+2. 이미지 사이즈 최적화

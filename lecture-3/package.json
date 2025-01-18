@@ -15,7 +15,7 @@
     "tailwindcss": "^1.1.4"
   },
   "scripts": {
-    "start": "npm run build:style && react-scripts start",
+    "start": "npm run build:style && react-scripts --openssl-legacy-provider start",
     "build": "npm run build:style && react-scripts build",
     "build:style": "postcss src/tailwind.css -o src/styles.css",
     "serve": "node ./server/server.js",

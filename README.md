@@ -35,3 +35,4 @@
 3. 동영상 사이즈 최적화 (동영상 압축)
 4. 폰트 최적화(폰트 적용 시점 컨트롤, 웹폰트 포멧 사용, local 폰트 사용, subset 사용, unicode range 적용, data-uri 변환, preload)
 5. 캐시 최적화
+6. 불필요한 css 줄이기(purgecss)

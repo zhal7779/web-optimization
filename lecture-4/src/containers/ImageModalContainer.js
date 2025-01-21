@@ -15,16 +15,17 @@ function ImageModalContainer() {
 
   //2.새로운 Equality Function 사용하기
   // shallowEqual " 하나씩 비교를 하다가 중간에 변경된 값이 있으면 비교를 멈추고 렌더링을 해주는 리덕스에서 제공하는 함수이다.
-  const { modalVisible, bgColor, src, alt } = useSelector(state => {
+  const { modalVisible, bgColor, src, alt, id } = useSelector(state => {
     return {
       modalVisible: state.imageModal.modalVisible,
       bgColor: state.imageModal.bgColor,
       src: state.imageModal.src,
       alt: state.imageModal.alt,
+      id: state.imageModal.id,
     };
   }, shallowEqual);
 
-  return <ImageModal modalVisible={modalVisible} bgColor={bgColor} src={src} alt={alt} />;
+  return <ImageModal modalVisible={modalVisible} bgColor={bgColor} src={src} alt={alt} id={id} />;
 }
 
 export default ImageModalContainer;

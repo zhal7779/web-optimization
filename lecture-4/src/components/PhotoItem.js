@@ -3,18 +3,24 @@ import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
 import { showModal } from '../redux/imageModal';
 import LazyLoad from 'react-lazyload';
-function PhotoItem({ photo: { urls, alt } }) {
+function PhotoItem({ photo: { id, urls, alt } }) {
   const dispatch = useDispatch();
 
   const openModal = () => {
-    dispatch(showModal({ src: urls.full, alt }));
+    dispatch(showModal({ src: urls.full, alt, id }));
   };
 
   return (
     <ImageWrap>
       {/* offset => 500픽셀만큼의 영역에 있는 이미지들도 미리 불러오는 옵션 */}
       <LazyLoad offset={500}>
-        <Image src={urls.small + '&t=' + new Date().getTime()} alt={alt} onClick={openModal} />
+        <Image
+          crossOrigin="*"
+          id={id}
+          src={urls.small + '&t=' + new Date().getTime()}
+          alt={alt}
+          onClick={openModal}
+        />
       </LazyLoad>
     </ImageWrap>
   );

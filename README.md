@@ -49,3 +49,4 @@
 2. useSelect 렌더링 문제 해결(+ redux)
 3. Redux Reselect 라이브러리를 통한 렌더링 최적화
 4. 병목 함수에 memoization 적용
+5. 병목 함수 로직 개선하기

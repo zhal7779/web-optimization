@@ -15,7 +15,7 @@ export function memoize(fn) {
       return fn(...args); // 원래 함수를 직접 호출합니다.
     }
 
-    const key = args[0].src;
+    const key = args[0].id;
 
     // 현재 인자(args)에 해당하는 결과가 캐시에 존재하는지 확인합니다.
     if (cache.hasOwnProperty(key)) {

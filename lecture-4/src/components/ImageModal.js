@@ -5,10 +5,10 @@ import { useDispatch } from 'react-redux';
 import { hideModal, setBgColor } from '../redux/imageModal';
 import { getAverageColorOfImage } from '../utils/getAverageColorOfImage';
 
-function ImageModal({ modalVisible, src, alt, bgColor }) {
+function ImageModal({ modalVisible, src, alt, bgColor, id }) {
   const dispatch = useDispatch();
-  const onLoadImage = e => {
-    const averageColor = getAverageColorOfImage(e.target);
+  const onLoadImage = () => {
+    const averageColor = getAverageColorOfImage(document.querySelector(`#${id}`));
     dispatch(setBgColor(averageColor));
   };
 
@@ -17,11 +17,7 @@ function ImageModal({ modalVisible, src, alt, bgColor }) {
   };
 
   return (
-    <Modal
-      modalVisible={modalVisible}
-      closeModal={closeModal}
-      bgColor={bgColor}
-    >
+    <Modal modalVisible={modalVisible} closeModal={closeModal} bgColor={bgColor}>
       <ImageWrap>
         <FullImage crossOrigin="*" src={src} alt={alt} onLoad={onLoadImage} />
       </ImageWrap>

@@ -46,3 +46,4 @@
 - 렌더링 성능 최적화
 
 1. Layout Shift 피하기
+2. useSelect 렌더링 문제 해결(+ redux)

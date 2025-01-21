@@ -1,4 +1,10 @@
-export function getAverageColorOfImage(imgElement) {
+// 병목함수에 메모이제이션 적용
+// 메모이제이션 기법을 적용하려면 순수 함수여야 한다.(인풋이 들어오면 같은 아웃풋으로 나와야하기 때문에)
+// 메모이제이션 기법도 결국 기회 비용이 있기에 모든 함수에 적용하는 건 좋지않다. ex) 인풋값이 매번 다른 경우 모든 인풋을 키로 저장한기에는 메모리 낭비가 심하기에 적절하지 못함
+// 반복적으로 동일한 인풋값이 들어오거나 연산이 오래걸리는 작업에 메모이제이션을 적용하는 게 적절하다
+import { memoize } from './memoize';
+
+export const getAverageColorOfImage = memoize(function (imgElement) {
   const canvas = document.createElement('canvas');
   const context = canvas.getContext && canvas.getContext('2d');
   const averageColor = {
@@ -33,4 +39,4 @@ export function getAverageColorOfImage(imgElement) {
   averageColor.b = ~~(averageColor.b / count);
 
   return averageColor;
-}
+});

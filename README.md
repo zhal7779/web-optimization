@@ -39,6 +39,10 @@
 
 #### lecture-4
 
+- 로딩 성능 최적화
+
+1. 이미지 Lazy Loading(+ react-lazyload)
+
 - 렌더링 성능 최적화
 
 1. Layout Shift 피하기
